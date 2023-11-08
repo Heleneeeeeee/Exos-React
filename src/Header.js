@@ -1,4 +1,10 @@
 function Header () {
+const userLogged = {
+    firstname : "Hélène",
+    lastname : "QUINTARD",
+    job : "web dev"
+}
+
 const isUserLogged = true;
 const itemsInCart = 2;
 
@@ -8,7 +14,7 @@ const itemsInCart = 2;
             <nav>
                 <ul>
                     {isUserLogged?(
-                    <li>Hélène QUINTARD</li>
+                    <li>{userLogged.firstname} {userLogged.lastname} ({userLogged.job})</li>
                     ):(
                     <li>Connexion</li>
                     )}  
