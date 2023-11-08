@@ -1,33 +1,45 @@
 function Products () {
 
     const productsAvailable = [
-        {title:"Robe",
+        {
+         title:"Robe",
          price: 170,
-         isPublished:"true",
+         isPublished:true,
         },
-        {title:"Pull",
+
+        {
+         title:"Pull",
          price: 50,
-         isPublished:"true",
+         isPublished:true,
         },
-        {title:"Pantalon",
+
+        {
+         title:"Pantalon",
          price: 120,
-         isPublished:"true",
+         isPublished:true,
         },
-        {title:"Chemise",
+
+        {
+         title:"Chemise",
          price: 100,
-         isPublished:"true",
-        },
+         isPublished:false,
+        }
     ];
 
     return (
        <main>
         {productsAvailable.map((product) => {
-        return (
+       
+       return (
         <article>
-            <h2>{product.title}</h2>
-            <p>{product.price}€</p>
+        {product.isPublished &&(
+            <>
+                <h2>{product.title}</h2>
+                <p>{product.price}€</p>
+            </>
+        )}
         </article>
-        );
+        )
             })}
        </main>
     );
